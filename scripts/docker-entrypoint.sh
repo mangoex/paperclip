@@ -25,5 +25,5 @@ fi
 if [ "$changed" = "1" ]; then
     chown -R node:node /paperclip
 fi
-
+export CLAUDE_SKIP_DANGEROUS_PERMISSIONS=1
 exec gosu node "$@"
